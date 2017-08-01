@@ -64,16 +64,16 @@ public class AlarmActivity extends AppCompatActivity {
                 | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         PendingIntent pIntent = PendingIntent.getActivity(this, 100, intent, 0);
 
-//        Calendar calendar = Calendar.getInstance();
-//        calendar.set(Calendar.YEAR, 2016);
-//        calendar.set(Calendar.MONTH, Calendar.SEPTEMBER);
-//        calendar.set(Calendar.DATE, 1);
-//        calendar.set(Calendar.HOUR_OF_DAY, 8);
-//        calendar.set(Calendar.MINUTE, 0);
-//        calendar.set(Calendar.SECOND, 0);
-//
-//        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pIntent);
-        alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + (5 * 1000), pIntent);
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.YEAR, 2016);
+        calendar.set(Calendar.MONTH, Calendar.SEPTEMBER);
+        calendar.set(Calendar.DATE, 1);
+        calendar.set(Calendar.HOUR_OF_DAY, 8);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+
+        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pIntent);
+//        alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + (5 * 1000), pIntent);
     }
     @Override
     protected void onNewIntent(Intent intent) {
